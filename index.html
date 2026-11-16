@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091c30">
+  <meta name="description" content="Consultoria e estratégia em Tatuí. Organização financeira, gestão de obras e gestão pública com planejamento, acompanhamento e direção.">
+  <title>M&amp;L | Consultoria &amp; Estratégia</title>
+  <link rel="icon" href="https://rafaelbarross.netlify.app/projetos/lm/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="https://rafaelbarross.netlify.app/projetos/lm/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://rafaelbarross.netlify.app/projetos/lm/assets/fonts/libre-caslon-display.ttf" as="font" type="font/ttf" crossorigin>
+
+  <style>
+    /* =========================================================
+       ESTILOS ORIGINAIS (styles.css)
+       ========================================================= */
+    @font-face { font-family: "Libre Caslon Display"; src: url("https://rafaelbarross.netlify.app/projetos/lm/assets/fonts/libre-caslon-display.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+    @font-face { font-family: "DM Sans"; src: url("https://rafaelbarross.netlify.app/projetos/lm/assets/fonts/dm-sans-latin.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+    :root { --navy: #091c30; --navy-light: #112940; --gold: #d6b878; --paper: #f6f5f0; --ink: #152a3a; --muted: #62696b; --line: #d8dcd7; --serif: Georgia,'Times New Roman',serif; --sans: Arial,Helvetica,sans-serif; --gutter: clamp(24px,5.4vw,88px); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { max-width: 100%; display: block; }
+    svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #a5772a; outline-offset: 6px; }
+    p, h1, h2, h3 { margin: 0; }
+    ul, ol { padding: 0; margin: 0; }
+    ::selection { background: var(--gold); color: var(--navy); }
+    .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .container { width: 100%; max-width: 1600px; padding-inline: var(--gutter); margin-inline: auto; }
+    .section-pad { padding-block: 110px; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; line-height: 1.5; }
+    .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; background: var(--paper); padding: 14px; transform: translateY(-160%); }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; padding: 24px var(--gutter); display: flex; justify-content: space-between; align-items: center; color: #fff; border-bottom: 1px solid rgba(255,255,255,.14); gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand-emblem { width: 64px; height: 64px; object-fit: contain; }
+    .brand-type { font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -2px; }
+    .brand-type > span { font-family: var(--sans); display: block; font-size: 8px; letter-spacing: 1.5px; margin-top: 9px; line-height: 1.4; }
+    .navigation { display: flex; align-items: center; gap: 38px; font-size: 12px; }
+    .navigation > a:not(.header-contact) { padding-block: 15px; position: relative; }
+    .navigation > a:not(.header-contact)::after { content: ""; height: 1px; background: var(--gold); position: absolute; bottom: 7px; left: 0; width: 0; transition: width .2s; }
+    .navigation > a:hover::after { width: 100%; }
+    .header-contact { border: 1px solid rgba(255,255,255,.46); padding: 6px 6px 6px 19px; border-radius: 40px; display: flex; align-items: center; gap: 24px; }
+    .circle-arrow { border-radius: 50%; width: 34px; height: 34px; display: grid; place-items: center; flex-shrink: 0; }
+    .header-contact .circle-arrow { background: var(--gold); color: var(--navy); }
+    .circle-arrow svg { width: 19px; height: 19px; }
+    .menu-toggle { display: none; }
+    .hero { position: relative; height: 100svh; min-height: 710px; max-height: 1080px; overflow: hidden; background: var(--navy); color: #fff; display: flex; align-items: flex-end; }
+    .hero-image, .hero-image img, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .hero-image img { object-fit: cover; object-position: 50% 48%; }
+    .hero-shade { background: linear-gradient(90deg, rgba(3,17,30,.7), rgba(3,17,30,.18) 80%), linear-gradient(0deg, rgba(3,17,30,.87), transparent 65%, rgba(3,17,30,.3)); }
+    .hero-content { position: relative; z-index: 1; padding-top: 190px; padding-bottom: 117px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 11px; margin-bottom: 31px; color: #efede7; font-size: 10px; letter-spacing: 2.2px; }
+    .hero-eyebrow > span { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+    h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -5.5px; font-size: clamp(86px, 8.6vw, 142px); line-height: .94; }
+    h1 em { font-weight: 400; color: #f1e7d5; }
+    h2 { font-family: var(--serif); font-size: clamp(44px, 4.4vw, 68px); font-weight: 400; line-height: 1.08; letter-spacing: -2px; }
+    h2 em { font-weight: 400; color: #777e76; }
+    .hero-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 29px; gap: 30px; }
+    .hero-intro > p { font-size: 17px; line-height: 1.55; color: #e1e5e5; margin-bottom: 26px; }
+    .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 29px; min-height: 54px; padding: 8px 8px 8px 23px; border-radius: 40px; font-size: 13px; font-weight: 600; transition: background .2s, transform .2s; }
+    .button:hover { transform: translateY(-3px); }
+    .button-gold { background: var(--gold); color: var(--navy); }
+    .button-gold:hover { background: #e5c991; }
+    .button-gold .circle-arrow { background: var(--navy); color: var(--gold); width: 38px; height: 38px; }
+    .explore-link { display: flex; align-items: center; gap: 24px; font-size: 12px; padding-bottom: 4px; }
+    .explore-arrow { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.44); border-radius: 50%; display: grid; place-items: center; font-size: 20px; transition: background .2s; }
+    .explore-link:hover .explore-arrow { background: rgba(255,255,255,.125); }
+    .hero-foot { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 65px; display: flex; align-items: center; justify-content: space-between; font-size: 9px; letter-spacing: 1.8px; color: #d7dddd; }
+    .hero-foot::before { content: ""; position: absolute; top: 0; left: var(--gutter); right: var(--gutter); height: 1px; background: rgba(255,255,255,.208); }
+    .hero-foot > span:last-child { display: flex; align-items: center; gap: 10px; }
+    .hero-foot i { display: block; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+    .section-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 25px; margin-bottom: 37px; }
+    .section-note { font-size: 13px; line-height: 1.6; color: var(--muted); }
+    .solutions h2 { margin-bottom: 64px; }
+    .method { background: var(--navy); color: var(--paper); }
+    .method .eyebrow { color: #b8c2c8; }
+    .small-mark { font-family: var(--serif); color: var(--gold); font-size: 27px; letter-spacing: -2px; }
+    .method-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 70px; }
+    .method h2 em { color: var(--gold); }
+    .method-heading > p { font-size: 14px; line-height: 1.7; color: #b6c0c7; max-width: 350px; padding-bottom: 4px; }
+    .method-steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 35px; }
+    .method-steps li { border-top: 1px solid rgba(255,255,255,.208); padding-top: 19px; }
+    .step-number { display: flex; align-items: center; justify-content: space-between; color: var(--gold); font-size: 12px; margin-bottom: 42px; }
+    .step-number > span { font-size: 19px; }
+    .method-steps h3 { font-family: var(--serif); font-size: 25px; font-weight: 400; margin-bottom: 14px; }
+    .method-steps p { font-size: 13px; line-height: 1.7; color: #b6c0c7; max-width: 230px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 9%; }
+    .about-visual { position: relative; min-height: 510px; align-self: stretch; overflow: hidden; background: var(--navy); }
+    .about-visual > img { width: 100%; height: 100%; position: absolute; object-fit: cover; object-position: 20% center; filter: brightness(.68) saturate(.65); }
+    .about-visual::after { content: ""; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, rgba(9,28,48,.79)); }
+    .about-caption { position: absolute; z-index: 1; bottom: 28px; left: 28px; right: 28px; display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #fff; font-size: 9px; letter-spacing: 1.8px; }
+    .about-copy .eyebrow { margin-bottom: 31px; }
+    .about-copy h2 { margin-bottom: 28px; }
+    .about-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 400px; margin-bottom: 15px; }
+    .text-link { display: inline-flex; gap: 24px; align-items: center; font-size: 12px; border-bottom: 1px solid #af9b72; padding-bottom: 9px; margin-top: 12px; }
+    .text-link:hover { color: #8a6422; }
+    .text-link svg { width: 20px; }
+    .local-signature { margin-top: 45px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; display: flex; align-items: center; gap: 9px; }
+    .location-dot { width: 6px; height: 6px; border-radius: 50%; background: #947844; box-shadow: 0 0 0 4px rgba(214,184,120,.19); }
+    .contact { background: #e9e6dd; position: relative; }
+    .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 40px; }
+    .contact .eyebrow { margin-bottom: 30px; }
+    .contact h2 { font-size: clamp(44px, 4.7vw, 72px); }
+    .contact h2 em { color: #7b6b4a; }
+    .contact p:not(.eyebrow) { font-size: 14px; line-height: 1.7; color: #626764; margin-top: 25px; }
+    .button-navy { background: var(--navy); color: var(--paper); gap: 25px; }
+    .button-navy:hover { background: #163650; }
+    .button-navy .circle-arrow { background: var(--gold); color: var(--navy); width: 40px; height: 40px; }
+    .site-footer { background: var(--navy); color: #fff; padding-top: 51px; }
+    .footer-main { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-bottom: 46px; }
+    .footer-main address { font-style: normal; font-size: 12px; line-height: 1.8; color: #b8c1c9; }
+    .footer-social { display: flex; align-items: center; gap: 25px; font-size: 12px; }
+    .footer-social svg { width: 18px; height: 18px; color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.14); display: flex; justify-content: space-between; gap: 20px; padding-block: 23px; font-size: 10px; color: #aab6bf; }
+    .mobile-contact { display: none; }
+    @media (min-width: 1600px) {
+      .site-header { padding-inline: max(var(--gutter), calc((100vw - 1424px) / 2)); }
+    }
+    @media (max-width: 1000px) {
+      .navigation { gap: 24px; }
+      .section-pad { padding-block: 85px; }
+      .about-grid { gap: 6%; }
+      .about-visual { min-height: 460px; }
+      .method-steps { gap: 22px; }
+      .method-steps h3 { font-size: 22px; }
+      .contact-grid { grid-template-columns: 1.2fr 1fr; gap: 25px; }
+    }
+    @media (max-width: 760px) {
+      :root { --gutter: 24px; }
+      html { scroll-padding-top: 20px; }
+      .site-header { padding-block: 15px; gap: 16px; }
+      .brand-emblem { width: 49px; height: 49px; }
+      .brand { gap: 9px; }
+      .js .menu-toggle { display: flex; align-items: center; gap: 13px; background: none; border: 1px solid rgba(255,255,255,.376); border-radius: 30px; color: #fff; padding: 12px 14px; min-height: 44px; position: relative; z-index: 2; }
+      .menu-label { font-size: 11px; }
+      .menu-lines { position: relative; width: 17px; height: 10px; border-block: 1px solid; }
+      .menu-lines::after { content: ""; position: absolute; inset: 4px 0 auto; height: 1px; background: currentColor; }
+      .menu-open .menu-lines { border: 0; }
+      .menu-open .menu-lines::before, .menu-open .menu-lines::after { content: ""; position: absolute; top: 4px; left: 0; width: 17px; height: 1px; background: currentColor; transform: rotate(45deg); }
+      .menu-open .menu-lines::after { transform: rotate(-45deg); }
+      .js .navigation { display: none; position: absolute; inset: 0 0 auto; background: var(--navy); padding: 110px 24px 35px; box-shadow: 0 20px 30px rgba(0,0,0,.2); flex-direction: column; align-items: stretch; gap: 5px; }
+      .js .navigation.is-open { display: flex; }
+      .navigation > a:not(.header-contact) { padding-block: 17px; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,.125); }
+      .navigation .header-contact { margin-top: 20px; align-self: flex-start; font-size: 13px; }
+      .navigation { flex-wrap: wrap; gap: 10px; }
+      .site-header:has(.navigation.is-open) .brand { z-index: 2; }
+      .hero { min-height: 700px; max-height: 940px; height: 100svh; }
+      .hero-image img { object-position: 59% center; }
+      .hero-shade { background: linear-gradient(0deg, rgba(6,24,43,.96) 0%, rgba(6,24,43,.6) 40%, rgba(6,24,43,.16) 80%, rgba(6,24,43,.4)), linear-gradient(90deg, rgba(6,24,43,.4), transparent); }
+      .hero-content { padding-top: 190px; padding-bottom: 102px; }
+      h1 { font-size: clamp(72px, 12.6vw, 100px); letter-spacing: -3.5px; line-height: .97; }
+      .hero-bottom { margin-top: 25px; }
+      .hero-intro > p { font-size: 15px; margin-bottom: 25px; }
+      .button { min-height: 54px; font-size: 12px; gap: 23px; }
+      .explore-link { display: none; }
+      .hero-foot { height: 59px; font-size: 7px; letter-spacing: 1.25px; }
+      .hero-foot > span:last-child { gap: 7px; }
+      .section-pad { padding-block: 66px; }
+      .section-top { margin-bottom: 26px; }
+      .eyebrow { font-size: 9px; letter-spacing: 1.7px; }
+      .section-note { display: none; }
+      h2 { font-size: clamp(38px, 6.9vw, 52px); letter-spacing: -1.7px; line-height: 1.12; }
+      .solutions h2 { margin-bottom: 39px; }
+      .method-heading { display: block; margin-bottom: 39px; }
+      .method-heading > p { font-size: 13px; margin-top: 24px; }
+      .method-steps { grid-template-columns: 1fr 1fr; gap: 30px 23px; }
+      .step-number { margin-bottom: 24px; font-size: 10px; }
+      .method-steps h3 { font-size: 23px; letter-spacing: -.6px; margin-bottom: 11px; }
+      .method-steps p { font-size: 12px; line-height: 1.65; }
+      .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .about-visual { min-height: 310px; max-height: 410px; aspect-ratio: 1.2 / 1; width: 100%; min-width: 0; }
+      .about-visual > img { object-position: center 48%; }
+      .about-caption { left: 22px; right: 22px; bottom: 22px; font-size: 8px; }
+      .about-copy { min-width: 0; }
+      .about-copy .eyebrow { margin-bottom: 21px; }
+      .about-copy h2 { margin-bottom: 23px; }
+      .about-copy > p:not(.eyebrow) { font-size: 13px; max-width: none; }
+      .local-signature { margin-top: 29px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 29px; }
+      .contact h2 { font-size: clamp(38px, 7.4vw, 54px); }
+      .contact .eyebrow { margin-bottom: 23px; }
+      .contact p:not(.eyebrow) { font-size: 13px; margin-top: 21px; }
+      .site-footer { padding-top: 38px; }
+      .footer-main { align-items: flex-start; flex-wrap: wrap; gap: 26px; padding-bottom: 31px; }
+      .footer-main .brand { width: 100%; }
+      .footer-main address { font-size: 11px; }
+      .footer-social { font-size: 11px; gap: 10px; }
+      .footer-bottom { font-size: 9px; line-height: 1.6; }
+      .js .mobile-contact { display: flex; position: fixed; z-index: 15; bottom: calc(14px + env(safe-area-inset-bottom)); left: 24px; right: 24px; align-items: center; justify-content: space-between; min-height: 53px; padding: 13px 20px; background: var(--gold); color: var(--navy); border: 1px solid #f2d9a2; border-radius: 30px; box-shadow: 0 6px 30px rgba(0,0,0,.2); font-size: 12px; font-weight: 600; transform: translateY(130px); visibility: hidden; transition: transform .25s, visibility .25s; }
+      .js .mobile-contact.is-visible { transform: translateY(0); visibility: visible; }
+      .menu-open .mobile-contact { display: none; }
+    }
+    @media (max-width: 360px) {
+      :root { --gutter: 20px; }
+      h1 { font-size: 67px; }
+      .hero-foot { font-size: 6.5px; letter-spacing: .7px; }
+      .method-steps { gap: 28px 16px; }
+      .method-steps h3 { font-size: 20px; }
+      .footer-main { gap: 24px; }
+      .footer-social { font-size: 10px; }
+    }
+    @media (max-width: 760px) and (max-height: 700px) {
+      .hero { min-height: 600px; }
+      .hero-content { padding-top: 145px; padding-bottom: 90px; }
+      .hero-bottom { margin-top: 20px; }
+      .hero-intro > p { margin-bottom: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, ::before, ::after { transition: none !important; animation: none !important; }
+    }
+
+    :root { --sans: 'DM Sans', Arial, Helvetica, sans-serif; --serif: 'Libre Caslon Display', Georgia, serif; }
+    input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    [hidden] { display: none !important; }
+    h1 { font-size: clamp(100px, 9.5vw, 152px); letter-spacing: -.025em; line-height: .9; }
+    h1 em { font-family: var(--serif); }
+    h2 { font-family: var(--sans); font-size: clamp(38px, 4vw, 60px); font-weight: 500; letter-spacing: -.055em; line-height: 1.12; }
+    h2 em { font-style: normal; font-weight: 400; color: #66746f; }
+    .method-steps h3 { font-family: var(--sans); font-size: 22px; font-weight: 500; letter-spacing: -.8px; }
+    .method-steps p { font-size: 14px; line-height: 1.7; }
+    .about-copy > p:not(.eyebrow) { font-size: 15px; }
+    .eyebrow { font-weight: 600; letter-spacing: 1.6px; }
+    .navigation { font-size: 13px; }
+    .button { font-size: 14px; font-weight: 600; }
+    .brand { gap: 14px; position: relative; }
+    .small-mark { font-family: var(--sans); font-size: 18px; font-weight: 500; letter-spacing: -1px; }
+    .contact-grid { grid-template-columns: 1fr 1.05fr; gap: 8%; align-items: start; }
+    .contact-intro { padding-top: 14px; }
+    .contact h2 { font-size: clamp(38px, 3.8vw, 58px); }
+    .contact-intro > p:not(.eyebrow) { font-size: 15px; line-height: 1.7; margin-top: 24px; }
+    .contact-intro > .text-link { margin-top: 28px; font-size: 12px; gap: 12px; }
+    .contact-route { display: flex; align-items: center; gap: 13px; font-size: 9px; letter-spacing: 1px; color: #746b59; margin-top: 65px; max-width: 380px; }
+    .contact-route i { height: 1px; background: #beb7a4; flex: 1 1 0%; }
+    .contact-route svg { width: 18px; }
+    .lead-form { padding: 32px; background: #f6f5f0; border: 1px solid #d2d2c8; border-radius: 4px; min-width: 0; }
+    .contact .form-heading { font-weight: 500; letter-spacing: -.5px; margin: 0 0 28px !important; font-size: 18px !important; color: var(--navy) !important; line-height: 1.4 !important; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .form-row > div { min-width: 0; }
+    .lead-form label { display: block; font-size: 12px; font-weight: 500; margin-bottom: 9px; color: var(--navy); }
+    .lead-form label > span { font-size: 10px; font-weight: 400; color: #727973; }
+    .lead-form input, .lead-form select, .lead-form textarea { display: block; width: 100%; max-width: 100%; min-width: 0; background: #fff; border: 1px solid #d0d5cd; border-radius: 3px; color: var(--navy); padding: 13px 14px; margin-bottom: 22px; font-size: 14px; line-height: 1.5; min-height: 48px; transition: border-color .2s, box-shadow .2s; }
+    .lead-form select { padding-right: 25px; }
+    .lead-form textarea { resize: vertical; min-height: 115px; }
+    .lead-form ::placeholder { color: #777e79; opacity: 1; }
+    .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { border-color: #967435; outline: 2px solid rgba(214,184,120,.4); outline-offset: 1px; }
+    .lead-form .button { border: 0; width: 100%; padding-left: 20px; min-height: 55px; }
+    .contact .form-note { font-size: 11px !important; line-height: 1.6 !important; margin-top: 15px !important; color: #646d67 !important; }
+    .contact .form-status { font-size: 12px !important; line-height: 1.6 !important; margin-top: 12px !important; color: var(--navy) !important; }
+    .form-status:empty { display: none; }
+    .lead-form .text-link { font-size: 12px; }
+    .location { padding-top: 90px; padding-bottom: 90px; }
+    .location-card { display: grid; grid-template-columns: 1fr 1.05fr; border: 1px solid #d7dad3; background: #efefe8; overflow: hidden; border-radius: 4px; }
+    .location-copy { padding: 52px 45px; }
+    .location-copy .eyebrow { margin-bottom: 25px; }
+    .location h2 { font-size: clamp(30px, 3vw, 43px); margin-bottom: 28px; }
+    .location address { font-style: normal; font-size: 14px; line-height: 1.8; color: #53605e; }
+    .location-note { font-size: 12px; color: #687370; margin-top: 24px; }
+    .location-copy .text-link { margin-top: 20px; font-size: 14px; }
+    .location-map { position: relative; min-height: 390px; background: #0c2236; isolation: isolate; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .map-streets { position: absolute; inset: 0; width: 100%; height: 100%; stroke: none; z-index: -2; }
+    .location-map::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(rgba(9,28,48,0), rgba(9,28,48,.6)); }
+    .map-center { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: -20px; }
+    .map-pin { width: 60px; height: 60px; display: grid; place-items: center; background: var(--navy); box-shadow: 0 0 0 1px rgba(214,184,120,.314), 0 0 0 12px rgba(214,184,120,.063); border-radius: 50%; color: var(--gold); margin-bottom: 2px; }
+    .map-pin svg { width: 28px; height: 28px; stroke-width: 1.4; }
+    .map-brand { color: var(--paper); font-size: 19px; font-weight: 500; letter-spacing: -1px; margin-bottom: 6px; }
+    .map-center .button { font-size: 12px; }
+    .map-caption { position: absolute; bottom: 24px; left: 12px; right: 12px; color: #acbfc6; text-align: center; font-size: 8px; letter-spacing: 1.2px; }
+    .footer-main address { max-width: 330px; }
+    .footer-main .brand { gap: 14px; }
+    @media (max-width: 1000px) {
+      .contact-grid { gap: 5%; }
+      .lead-form { padding: 25px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .location-copy { padding: 38px 30px; }
+      .method-steps h3 { font-size: 20px; }
+    }
+    @media (max-width: 760px) {
+      .site-header { padding-block: 12px; }
+      h1 { font-size: clamp(84px, 15.5vw, 115px); letter-spacing: -.025em; line-height: .9; }
+      .hero-content { padding-top: 185px; }
+      .hero-intro > p { font-size: 16px; }
+      .hero .button { font-size: 13px; }
+      h2 { font-size: clamp(34px, 6.5vw, 45px); letter-spacing: -.055em; line-height: 1.13; }
+      .about-copy > p:not(.eyebrow) { font-size: 14px; }
+      .method-steps h3 { font-size: 20px; }
+      .method-steps p { font-size: 13px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+      .contact-intro { padding-top: 0; }
+      .contact h2 { font-size: clamp(35px, 7.2vw, 48px); }
+      .contact-intro > p:not(.eyebrow) { font-size: 14px; }
+      .contact-route { display: none; }
+      .contact-intro > .text-link { margin-top: 21px; }
+      .lead-form { padding: 23px 20px; }
+      .contact .form-heading { font-size: 17px !important; margin-bottom: 23px !important; }
+      .lead-form label { font-size: 12px; }
+      .lead-form input, .lead-form select, .lead-form textarea { font-size: 16px; margin-bottom: 20px; padding: 12px; }
+      .lead-form .button { font-size: 12px; gap: 10px; padding-left: 16px; }
+      .contact .form-note { font-size: 11px !important; }
+      .location { padding-block: 60px; }
+      .location-card { grid-template-columns: 1fr; }
+      .location-copy { padding: 32px 25px; }
+      .location h2 { font-size: 32px; }
+      .location address { font-size: 13px; }
+      .location-map { min-height: 310px; }
+      .map-caption { font-size: 7px; letter-spacing: .9px; }
+      .footer-main address { font-size: 12px; }
+      .footer-bottom { font-size: 10px; }
+    }
+    @media (max-width: 360px) {
+      .site-header { gap: 10px; }
+      h1 { font-size: 78px; }
+      .method-steps h3 { font-size: 17px; }
+      .lead-form { padding: 22px 16px; }
+      .lead-form .button { font-size: 11px; padding-left: 13px; }
+      .location-copy { padding: 28px 21px; }
+      .location h2 { font-size: 30px; }
+      .hero-foot { font-size: 6.5px; }
+    }
+    @media (max-width: 760px) and (max-height: 700px) {
+      .hero-content { padding-top: 145px; }
+    }
+
+    :root { --muted: #65686c; }
+    .hero h1 { font-family: "Libre Caslon Display", Georgia, serif; font-size: clamp(92px, 9.2vw, 146px); font-weight: 400; font-style: normal; color: #fff; letter-spacing: -.055em; line-height: .94; }
+    .hero-intro > p, .hero-foot, .explore-link { color: #fff; }
+    h2 em { color: #6a6c70; }
+    .contact h2 em { color: #6a6c70; }
+    .method h2 em { color: #fff; }
+    .contact p:not(.eyebrow), .location address, .location-note, .contact-route { color: #65686c; }
+    .lead-form label > span, .lead-form ::placeholder { color: #707277; }
+    .contact .form-note { color: #65686c !important; }
+    .brand-panel { background: #091c30; display: flex; align-items: center; justify-content: center; isolation: isolate; }
+    .brand-panel::after { inset: 0; background: radial-gradient(at 55% 45%, rgba(41,64,87,.4), transparent 70%); z-index: -1; }
+    .brand-panel-grid { position: absolute; inset: 0; z-index: -2; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 58px 58px; -webkit-mask-image: linear-gradient(135deg, #000, transparent 85%); mask-image: linear-gradient(135deg, #000, transparent 85%); }
+    .brand-panel-label { position: absolute; top: 30px; left: 30px; color: #c4c8ce; font-size: 9px; letter-spacing: 1.8px; }
+    .brand-panel > .brand-panel-logo { position: relative; width: 72%; height: auto; object-fit: contain; filter: none; z-index: 1; max-height: 72%; }
+    .brand-panel .about-caption { color: #fff; z-index: 2; }
+    .brand-emblem { filter: none; width: 157px; height: 100px; object-fit: contain; }
+    .brand-type { display: none; }
+    .site-header { padding-block: 14px; }
+    .footer-main .brand-emblem { width: 185px; height: 123px; }
+    @media (max-width: 760px) {
+      .hero h1 { font-size: clamp(65px, 12.5vw, 96px); letter-spacing: -.05em; line-height: .96; }
+      .brand-emblem { width: 117px; height: 78px; }
+      .site-header { padding-block: 8px; }
+      .footer-main .brand-emblem { width: 160px; height: 107px; }
+      .brand-panel-label { left: 24px; top: 24px; font-size: 8px; }
+      .brand-panel > .brand-panel-logo { width: 76%; }
+    }
+    @media (max-width: 360px) {
+      .hero h1 { font-size: 59px; }
+      .brand-emblem { width: 104px; height: 69px; }
+    }
+    .solutions h2 { margin-bottom: 42px; }
+    .service-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); margin-bottom: 65px; }
+    .service-index a { display: flex; align-items: center; gap: 14px; padding: 23px 22px; font-size: 13px; font-weight: 500; transition: background .2s; }
+    .service-index a:first-child { padding-left: 0; }
+    .service-index a + a { border-left: 1px solid var(--line); }
+    .service-index a:hover { background: #eae9e3; }
+    .service-index a > span { font-size: 10px; color: #707277; font-weight: 400; }
+    .service-index svg { margin-left: auto; width: 18px; height: 18px; }
+    .service-features { display: grid; gap: 72px; }
+    .service-feature { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 6%; align-items: center; scroll-margin-top: 35px; }
+    .service-feature + .service-feature { border-top: 1px solid var(--line); padding-top: 72px; }
+    .service-photo { display: block; overflow: hidden; aspect-ratio: 16 / 10; background: var(--navy); }
+    .service-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .service-feature-reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); }
+    .service-feature-reverse .service-photo { grid-area: 1 / 2; }
+    .service-feature-reverse .service-copy { grid-area: 1 / 1; }
+    .service-copy { min-width: 0; }
+    .service-copy .eyebrow { font-size: 10px; letter-spacing: 1.5px; margin-bottom: 19px; }
+    .service-copy h3 { font-size: clamp(27px, 2.45vw, 38px); font-weight: 500; letter-spacing: -.045em; line-height: 1.16; margin-bottom: 20px; }
+    .service-copy h3 > span { color: #6a6c70; font-weight: 400; }
+    .service-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.75; color: var(--muted); max-width: 420px; }
+    .service-deliverables { list-style: none; display: grid; gap: 10px; margin-top: 22px; }
+    .service-deliverables li { font-size: 12px; line-height: 1.6; display: flex; align-items: baseline; gap: 11px; }
+    .service-deliverables li::before { content: ""; display: block; flex: 0 0 12px; width: 12px; height: 1px; background: #a1844d; transform: translateY(-4px); }
+    .service-cta { margin-top: 26px; min-height: 44px; gap: 17px; padding-block: 10px; font-size: 12px; font-weight: 500; }
+    .service-cta svg { flex-shrink: 0; }
+    @media (max-width: 1100px) {
+      .service-feature, .service-feature-reverse { gap: 4%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .service-copy h3 { font-size: 28px; }
+      .service-photo { aspect-ratio: 1.25 / 1; }
+      .service-index a { font-size: 12px; padding-inline: 16px; gap: 10px; }
+    }
+    @media (max-width: 760px) {
+      .solutions h2 { margin-bottom: 30px; }
+      .service-index { grid-template-columns: 1fr; margin-bottom: 35px; }
+      .service-index a, .service-index a:first-child { padding: 17px 0; font-size: 13px; min-height: 54px; }
+      .service-index a + a { border-left: 0; border-top: 1px solid var(--line); }
+      .service-index a:hover { background: transparent; }
+      .service-features { gap: 38px; }
+      .service-feature, .service-feature-reverse { grid-template-columns: 1fr; gap: 25px; scroll-margin-top: 20px; }
+      .service-feature + .service-feature { padding-top: 38px; }
+      .service-feature-reverse .service-photo, .service-feature-reverse .service-copy { grid-area: auto; }
+      .service-photo { aspect-ratio: 16 / 9; }
+      .service-copy .eyebrow { font-size: 9px; margin-bottom: 15px; }
+      .service-copy h3 { font-size: clamp(27px, 6.7vw, 36px); margin-bottom: 16px; }
+      .service-copy > p:not(.eyebrow) { font-size: 14px; max-width: none; }
+      .service-deliverables { margin-top: 18px; gap: 9px; }
+      .service-cta { margin-top: 19px; font-size: 12px; gap: 14px; }
+    }
+    @media (max-width: 360px) {
+      .service-copy h3 { font-size: 25px; }
+      .service-cta { font-size: 11px; gap: 10px; }
+    }
+    .explore-arrow svg { width: 20px; height: 20px; }
+    .step-number > span { display: grid; place-items: center; }
+    .step-number svg { width: 19px; height: 19px; }
+    .footer-bottom a { display: inline-flex; align-items: center; gap: 7px; }
+    .footer-bottom svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* portfolio.css + ui-icons.css */
+    .portfolio-back { padding: 24px; text-align: center; background: #091c30; color: #f5f4ef; font: 14px / 1.5 Arial, sans-serif; }
+    .portfolio-back a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; text-decoration: underline; text-underline-offset: 5px; }
+    .portfolio-back a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+    .ui-icon.ui-icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: -.125em; overflow: visible; pointer-events: none; }
+
+    /* =========================================================
+       MOVIMENTO — base
+       ========================================================= */
+    :root {
+      --ease-out: cubic-bezier(.2, .8, .2, 1);
+      --ease-expo: cubic-bezier(.16, 1, .3, 1);
+      --ease-io: cubic-bezier(.77, 0, .18, 1);
+    }
+
+    /* Linhas mascaradas dos títulos */
+    .line { display: block; overflow: hidden; padding-block: .1em .16em; margin-block: -.1em -.16em; }
+    .line-inner { display: block; }
+    .service-copy h3 > .line { color: inherit; font-weight: inherit; }
+    .service-copy h3 .line-inner > span { color: #6a6c70; font-weight: 400; }
+
+    /* Barra de progresso de leitura */
+    .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+    html:not(.motion) .scroll-progress { display: none; }
+
+    /* Folga para o parallax das imagens */
+    .service-photo { position: relative; }
+    .service-photo img { position: absolute; left: 0; top: -8%; width: 100%; height: 116%; transition: transform 1.2s var(--ease-out); }
+    .brand-panel-grid { inset: -10% 0; }
+    .brand-panel > .brand-panel-logo { transition: transform 1.4s var(--ease-out); }
+
+    /* Linha dourada que preenche os passos do método conforme o scroll */
+    .method-steps li { position: relative; }
+    .step-line { position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+
+    /* ---------- Entrada do hero (CSS puro, sem esperar JS) ---------- */
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-image { animation: fade-in 1.6s ease-out both; }
+      .hero-image img { animation: zoom-out 2.6s var(--ease-expo) both; }
+      .site-header { animation: drop-in 1.2s var(--ease-expo) .35s both; }
+      .hero h1 .line-inner { animation: line-up 1.5s var(--ease-expo) .4s both; }
+      .hero h1 .line + .line .line-inner { animation-delay: .54s; }
+      .hero-intro > p { animation: rise 1.2s var(--ease-expo) .8s both; }
+      .hero-intro > .button { animation: rise 1.2s var(--ease-expo) .92s both; }
+      .explore-link { animation: rise 1.2s var(--ease-expo) 1s both; }
+      .hero-foot { animation: fade-in 1.2s ease-out 1.15s both; }
+    }
+    @keyframes fade-in { from { opacity: 0; } }
+    @keyframes zoom-out { from { scale: 1.16; } }
+    @keyframes drop-in { from { opacity: 0; translate: 0 -18px; } }
+    @keyframes line-up { from { translate: 0 115%; } }
+    @keyframes rise { from { opacity: 0; translate: 0 26px; } }
+
+    /* ---------- Revelações no scroll (classe .motion vem do JS) ---------- */
+    html.motion [data-reveal] {
+      opacity: 0; translate: 0 var(--y, 36px);
+      transition: opacity 1s var(--ease-out) var(--d, 0s), translate 1.2s var(--rease, var(--ease-expo)) var(--d, 0s);
+    }
+    html.motion [data-reveal].is-in { opacity: 1; translate: none; }
+
+    html.motion [data-lines] .line-inner { translate: 0 115%; transition: translate 1.3s var(--ease-expo) var(--d, 0s); }
+    html.motion [data-lines].is-in .line-inner { translate: none; }
+
+    html.motion [data-clip] { clip-path: inset(0 100% 0 0); transition: clip-path 1.6s var(--ease-io) var(--d, 0s); }
+    html.motion [data-clip="right"] { clip-path: inset(0 0 0 100%); }
+    html.motion [data-clip="up"] { clip-path: inset(100% 0 0 0); }
+    html.motion [data-clip].is-in { clip-path: inset(0 0 0 0); }
+    html.motion [data-clip].is-done { clip-path: none; transition: none; }
+
+    /* Fotos dos serviços: zoom de assentamento junto com a cortina */
+    html.motion .service-photo img { scale: 1.25; transition: scale 2.2s var(--ease-expo) .25s, transform 1.2s var(--ease-out); }
+    html.motion .service-photo.is-in img { scale: 1; }
+
+    /* Painel da marca */
+    html.motion .brand-panel .brand-panel-logo { opacity: 0; scale: .88; transition: opacity 1.4s var(--ease-out) .8s, scale 1.8s var(--ease-expo) .75s, transform 1.4s var(--ease-out); }
+    html.motion .brand-panel.is-in .brand-panel-logo { opacity: 1; scale: 1; }
+    html.motion .brand-panel :is(.brand-panel-label, .about-caption) { opacity: 0; translate: 0 14px; transition: opacity 1s var(--ease-out) 1.05s, translate 1.1s var(--ease-expo) 1.05s; }
+    html.motion .brand-panel.is-in :is(.brand-panel-label, .about-caption) { opacity: 1; translate: none; }
+
+    /* Rota do contato: a linha se desenha */
+    html.motion .contact-route[data-inview] { opacity: 0; transition: opacity 1s var(--ease-out) .2s; }
+    html.motion .contact-route[data-inview] i { transform: scaleX(0); transform-origin: 0 50%; transition: transform 1.6s var(--ease-io) .45s; }
+    html.motion .contact-route.is-in { opacity: 1; }
+    html.motion .contact-route.is-in i { transform: none; }
+
+    /* ---------- Hover: base ---------- */
+    .button { position: relative; isolation: isolate; overflow: hidden; --sweep: #ead39f; transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+    .button::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: var(--sweep); transform: scaleX(0); transform-origin: 100% 50%; transition: transform .6s var(--ease-io); }
+    .button-navy { --sweep: #173a57; }
+    .circle-arrow, .explore-arrow { overflow: hidden; }
+    .circle-arrow { transition: transform .45s var(--ease-out); }
+    .header-contact { transition: background-color .35s, border-color .35s; }
+
+    .navigation > a:not(.header-contact)::after { width: 100%; transform: scaleX(0); transform-origin: 100% 50%; transition: transform .5s var(--ease-io); }
+    .navigation > a:hover::after { width: 100%; }
+    .text-link { position: relative; transition: color .3s; }
+    .text-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: 100% 50%; transition: transform .55s var(--ease-io); }
+    .text-link svg { transition: transform .4s var(--ease-out); }
+    .service-index a { position: relative; }
+    .service-index a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: 100% 50%; transition: transform .6s var(--ease-io); }
+    .service-index svg { transition: transform .5s var(--ease-out); }
+    .service-index a > span { transition: color .3s; }
+    .service-deliverables li::before { transition: flex-basis .45s var(--ease-out), width .45s var(--ease-out); }
+    .method-steps h3 { transition: color .35s, transform .45s var(--ease-out); }
+    .step-number svg, .about-caption svg, .footer-social svg, .footer-bottom svg { transition: transform .5s var(--ease-out); }
+    .footer-social, .footer-bottom a, .brand { transition: color .3s, opacity .3s; }
+    .lead-form :is(input, select, textarea):hover:not(:focus) { border-color: #aeb3a8; }
+    .portfolio-back a { transition: text-underline-offset .3s, color .3s; }
+
+    /* Pulsos discretos */
+    .map-pin { position: relative; }
+    .map-pin::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--gold); animation: pin-pulse 2.6s cubic-bezier(.2, .6, .3, 1) infinite; pointer-events: none; }
+    .location-dot { animation: dot-pulse 2.4s ease-in-out infinite; }
+
+    @keyframes arrow-through { 0% { transform: translate(0, 0); } 45% { transform: translate(160%, -160%); } 45.01% { transform: translate(-160%, 160%); } 100% { transform: translate(0, 0); } }
+    @keyframes arrow-down { 0% { transform: translateY(0); } 45% { transform: translateY(160%); } 45.01% { transform: translateY(-160%); } 100% { transform: translateY(0); } }
+    @keyframes pin-pulse { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(2.3); opacity: 0; } }
+    @keyframes dot-pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(214,184,120,.19); } 50% { box-shadow: 0 0 0 8px rgba(214,184,120,.04); } }
+
+    /* ---------- Hover: só com mouse ---------- */
+    @media (hover: hover) and (pointer: fine) {
+      .button:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -18px rgba(9,28,48,.55); }
+      .button-gold:hover { background: var(--gold); }
+      .button-navy:hover { background: var(--navy); }
+      .button:hover::before { transform: scaleX(1); transform-origin: 0 50%; }
+      .button:hover .circle-arrow, .header-contact:hover .circle-arrow { transform: scale(1.08); }
+      .button:hover .circle-arrow svg, .header-contact:hover .circle-arrow svg { animation: arrow-through .7s cubic-bezier(.65, 0, .35, 1); }
+      .header-contact:hover { background: rgba(255,255,255,.08); border-color: rgba(214,184,120,.75); }
+      .menu-toggle:hover { border-color: var(--gold); }
+
+      .navigation > a:not(.header-contact):hover::after { transform: scaleX(1); transform-origin: 0 50%; }
+      .explore-link:hover .explore-arrow svg { animation: arrow-down .7s cubic-bezier(.65, 0, .35, 1); }
+
+      .text-link:hover::after { transform: scaleX(1); transform-origin: 0 50%; }
+      .text-link:hover svg { transform: translate(3px, -3px); }
+      .text-link:hover svg:has(use[href="#arrow"]) { transform: translateX(5px); }
+
+      .service-index a:hover::after { transform: scaleX(1); transform-origin: 0 50%; }
+      .service-index a:hover svg { transform: rotate(90deg); }
+      .service-index a:hover > span { color: #a1844d; }
+
+      .service-feature:hover .service-photo img { transform: scale(1.05); }
+      .service-feature:hover .service-deliverables li::before { flex-basis: 20px; width: 20px; }
+
+      .method-steps li:hover h3 { color: var(--gold); transform: translateX(4px); }
+      .method-steps li:hover .step-number svg { transform: rotate(45deg); }
+
+      .about-visual:hover .brand-panel-logo { transform: scale(1.035); }
+      .about-visual:hover .about-caption svg { transform: rotate(45deg); }
+
+      .brand:hover { opacity: .82; }
+      .footer-social:hover { color: var(--gold); }
+      .footer-social:hover svg { transform: translate(3px, -3px); }
+      .footer-bottom a:hover { color: #fff; }
+      .footer-bottom a:hover svg { transform: translateY(-3px); }
+      .portfolio-back a:hover { text-underline-offset: 8px; color: var(--gold); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <filter id="logo-white" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.965 0 0 0 0 0.961 0 0 0 0 0.941 -0.2126 -0.7152 -0.0722 0 1"></feColorMatrix><feComposite in2="SourceAlpha" operator="in"></feComposite></filter>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></symbol>
+  </defs></svg>
+
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="M&amp;L Consultoria e Estratégia — início">
+      <img class="brand-emblem" src="https://rafaelbarross.netlify.app/projetos/lm/assets/logo-white.png" width="1536" height="1024" alt="M&amp;L">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+    <nav class="navigation" id="navigation" aria-label="Menu principal">
+      <a href="#solucoes">Soluções</a><a href="#metodo">Nosso método</a><a href="#sobre">A M&amp;L</a>
+      <a class="header-contact contact-link" href="#contato">Vamos conversar <span class="circle-arrow"><svg><use href="#arrow-up"></use></svg></span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-image"><source media="(max-width: 700px)" srcset="https://rafaelbarross.netlify.app/projetos/lm/assets/hero-architecture-mobile.jpg"><img src="https://rafaelbarross.netlify.app/projetos/lm/assets/hero-architecture.jpg" alt="" width="1920" height="1280" fetchpriority="high"></picture>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <h1 id="hero-title"><span class="line"><span class="line-inner">Gestão com </span></span><span class="line"><span class="line-inner">direção.</span></span></h1>
+        <div class="hero-bottom">
+          <div class="hero-intro"><p>Estratégia para empresas, obras<br class="desktop-break"> e gestão pública.</p><a class="button button-gold contact-link" href="#contato">Falar com um consultor <span class="circle-arrow"><svg><use href="#arrow-up"></use></svg></span></a></div>
+          <a class="explore-link" href="#solucoes"><span>Conheça nossas soluções</span><span class="explore-arrow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6"></path></svg></span></a>
+        </div>
+      </div>
+      <div class="hero-foot container"><span>VISÃO ESTRATÉGICA. AÇÃO PRÁTICA.</span><span>TATUÍ, SÃO PAULO <i aria-hidden="true"></i></span></div>
+    </section>
+
+    <section class="solutions section-pad" id="solucoes" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-top"><p class="eyebrow">01 / ONDE ATUAMOS</p><p class="section-note">Cada desafio pede um olhar.<br>Cada solução, uma direção.</p></div>
+        <h2 id="solutions-title">Mais controle hoje.<br><em>Mais possibilidades amanhã.</em></h2>
+        <nav class="service-index" aria-label="Áreas de atuação"><a href="#gestao-empresas"><span>01</span> Gestão de empresas <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a><a href="#gestao-obras"><span>02</span> Gestão de obras <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a><a href="#gestao-publica"><span>03</span> Gestão pública <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a></nav>
+        <div class="service-features">
+          <article class="service-feature" id="gestao-empresas" aria-labelledby="empresas-title">
+            <picture class="service-photo"><source media="(max-width: 760px)" srcset="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-empresas-mobile.webp"><img src="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-empresas.webp" alt="Equipe reunida analisando gráficos, indicadores e resultados de uma empresa" width="1672" height="941" loading="lazy" decoding="async"></picture>
+            <div class="service-copy"><p class="eyebrow">01 / GESTÃO DE EMPRESAS</p><h3 id="empresas-title">Clareza nos números.<br><span>Confiança nas decisões.</span></h3><p>Organize as finanças e os processos para conduzir sua empresa com mais controle.</p><ul class="service-deliverables"><li>Planejamento financeiro e fluxo de caixa</li><li>Indicadores e metas que orientam a gestão</li><li>Processos mais claros e eficientes</li></ul><a class="text-link service-cta" href="#contato" data-service="Consultoria para empresas">Quero organizar minha empresa <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a></div>
+          </article>
+          <article class="service-feature service-feature-reverse" id="gestao-obras" aria-labelledby="obras-title">
+            <picture class="service-photo"><source media="(max-width: 760px)" srcset="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-obras-mobile.webp"><img src="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-obras.webp" alt="Canteiro de obras com equipe, plantas de execução e capacete de segurança" width="1672" height="941" loading="lazy" decoding="async"></picture>
+            <div class="service-copy"><p class="eyebrow">02 / GESTÃO DE OBRAS</p><h3 id="obras-title">Cada etapa no plano.<br><span>Cada recurso bem aplicado.</span></h3><p>Do planejamento à execução, acompanhe prazos, custos e recursos com mais previsibilidade.</p><ul class="service-deliverables"><li>Planejamento físico-financeiro</li><li>Controle de prazos, compras e suprimentos</li><li>Relatórios e acompanhamento da execução</li></ul><a class="text-link service-cta" href="#contato" data-service="Gestão de obras">Quero mais controle na minha obra <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a></div>
+          </article>
+          <article class="service-feature" id="gestao-publica" aria-labelledby="publica-title">
+            <picture class="service-photo"><source media="(max-width: 760px)" srcset="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-publica-mobile.webp"><img src="https://rafaelbarross.netlify.app/projetos/lm/assets/gestao-publica.webp" alt="Bandeira do Brasil, documentos de planejamento e balança diante do Congresso Nacional" width="1672" height="941" loading="lazy" decoding="async"></picture>
+            <div class="service-copy"><p class="eyebrow">03 / GESTÃO PÚBLICA</p><h3 id="publica-title">Mais eficiência na gestão.<br><span>Mais capacidade de entrega.</span></h3><p>Estruture processos e fortaleça a administração para cuidar melhor dos recursos públicos.</p><ul class="service-deliverables"><li>Organização de rotinas e processos internos</li><li>Planejamento e apoio à governança</li><li>Transparência e conformidade documental</li></ul><a class="text-link service-cta" href="#contato" data-service="Gestão pública">Conversar sobre gestão pública <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method section-pad" id="metodo" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-top"><p class="eyebrow">02 / COMO TRABALHAMOS</p><span class="small-mark" aria-hidden="true">M&amp;L</span></div>
+        <div class="method-heading"><h2 id="method-title">Da visão<br><em>à prática.</em></h2><p>Entender o cenário. Definir prioridades.<br>E acompanhar cada próximo passo.</p></div>
+        <ol class="method-steps">
+          <li><span class="step-number">01<span aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#arrow-up"></use></svg></span></span><h3>Diagnóstico</h3><p>Identificamos os gargalos e as oportunidades da sua operação.</p></li>
+          <li><span class="step-number">02<span aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#arrow-up"></use></svg></span></span><h3>Estratégia</h3><p>Construímos um plano com prioridades, metas e indicadores.</p></li>
+          <li><span class="step-number">03<span aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#arrow-up"></use></svg></span></span><h3>Implementação</h3><p>Acompanhamos a aplicação das melhorias na sua rotina.</p></li>
+          <li><span class="step-number">04<span aria-hidden="true"><svg aria-hidden="true" focusable="false"><use href="#arrow-up"></use></svg></span></span><h3>Monitoramento</h3><p>Avaliamos os indicadores e ajustamos a rota com você.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual brand-panel"><div class="brand-panel-grid" aria-hidden="true"></div><span class="brand-panel-label">VISÃO CLARA. DIREÇÃO CERTA.</span><img class="brand-panel-logo" src="https://rafaelbarross.netlify.app/projetos/lm/assets/logo-white.png" alt="M&amp;L Consultoria &amp; Estratégia" width="750" height="500" loading="lazy"><div class="about-caption"><span>ESTRUTURA PARA AVANÇAR.</span><svg aria-hidden="true"><use href="#arrow-up"></use></svg></div></div>
+        <div class="about-copy"><p class="eyebrow">03 / A M&amp;L</p><h2 id="about-title">Estratégia com<br><em>os pés no chão.</em></h2><p>Apoiamos empresas, obras e organizações públicas que precisam organizar a gestão e avançar com mais segurança.</p><p>De Tatuí, unimos planejamento e acompanhamento para aproximar a estratégia da sua realidade.</p><a class="text-link" href="#metodo">Conheça nosso método <svg aria-hidden="true"><use href="#arrow"></use></svg></a><div class="local-signature"><span class="location-dot" aria-hidden="true"></span>Tatuí, São Paulo</div></div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <p class="eyebrow">04 / VAMOS CONVERSAR</p>
+          <h2 id="contact-title">Seu próximo passo<br><em>começa aqui.</em></h2>
+          <p>Conte um pouco do seu momento.<br>A conversa já começa na direção certa.</p>
+          <a id="primary-contact" class="text-link" href="https://wa.me/5511968337874?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20consultoria%20da%20M%26L." target="_blank" rel="noopener noreferrer"><span id="contact-label">Prefiro ir direto ao WhatsApp</span><svg aria-hidden="true"><use href="#arrow-up"></use></svg></a>
+          <div class="contact-route" aria-hidden="true"><span>SEU DESAFIO</span><i></i><svg><use href="#arrow"></use></svg><span>NOSSO PRÓXIMO PASSO</span></div>
+        </div>
+        <form id="lead-form" class="lead-form">
+          <p class="form-heading">Vamos entender o seu cenário.</p>
+          <div class="form-row"><div><label for="lead-name">Seu nome <span>(opcional)</span></label><input id="lead-name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" maxlength="60"></div><div><label for="lead-service">Onde você precisa de apoio?</label><select id="lead-service" name="service" required><option value="" disabled selected>Selecione uma área</option><option value="Consultoria para empresas">Minha empresa</option><option value="Gestão de obras">Minha obra</option><option value="Gestão pública">Gestão pública</option><option value="Preciso de orientação">Ainda não sei</option></select></div></div>
+          <label for="lead-company">Empresa ou organização <span>(opcional)</span></label><input id="lead-company" name="company" autocomplete="organization" placeholder="Nome da empresa ou projeto" maxlength="100">
+          <label for="lead-challenge">O que você quer melhorar?</label><textarea id="lead-challenge" name="challenge" rows="3" placeholder="Ex.: organizar o financeiro, controlar os custos da obra ou melhorar os processos." maxlength="1000" required></textarea>
+          <button class="button button-navy" type="submit">Enviar mensagem no WhatsApp <span class="circle-arrow"><svg aria-hidden="true"><use href="#arrow-up"></use></svg></span></button>
+          <p class="form-note">Você revisa a mensagem no WhatsApp antes de enviar.</p>
+          <p id="lead-status" class="form-status" role="status" aria-live="polite"></p>
+          <a id="lead-fallback" class="text-link" hidden target="_blank" rel="noopener noreferrer">Abrir minha mensagem no WhatsApp <svg aria-hidden="true" focusable="false"><use href="#arrow-up"></use></svg></a>
+          <noscript><p>Ative o JavaScript para preparar a mensagem ou use o contato direto ao lado.</p></noscript>
+        </form>
+      </div>
+    </section>
+
+    <section class="location section-pad" id="localizacao" aria-labelledby="location-title">
+      <div class="container">
+        <div class="location-card">
+          <div class="location-copy"><p class="eyebrow">05 / ONDE ESTAMOS</p><h2 id="location-title">Perto de você.<br><em>Do seu próximo passo.</em></h2><address id="location-address">R. Treze de Fevereiro, 97 — Centro<br>Tatuí, SP · 18270-340</address><a id="location-phone" class="text-link" href="https://wa.me/5511968337874?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20consultoria%20da%20M%26L." target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem pelo WhatsApp para (11) 96833-7874">(11) 96833-7874 <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a><p class="location-note">Vamos conversar sobre o seu projeto.</p></div>
+          <div class="location-map">
+            <svg class="map-streets" viewBox="0 0 720 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="blocks" width="160" height="120" patternTransform="rotate(-16)" patternUnits="userSpaceOnUse"><rect x="14" y="14" width="132" height="92" rx="7" fill="#173248"></rect><path d="M0 0H160M0 0V120" fill="none" stroke="#80999e" stroke-opacity=".35" stroke-width="2"></path></pattern></defs><rect width="720" height="440" fill="url(#blocks)"></rect><path d="M-40 380Q220 130 350 210T770 70" fill="none" stroke="#294d5b" stroke-width="42"></path><path d="M-40 380Q220 130 350 210T770 70" fill="none" stroke="#d6b878" stroke-opacity=".3" stroke-width="2"></path><path d="M140 -20 560 470" stroke="#b1b8b2" stroke-opacity=".25" stroke-width="11"></path></svg>
+            <div class="map-center"><span class="map-pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span><span class="map-brand">M&amp;L</span><a id="maps-link" class="button button-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Treze%20de%20Fevereiro%2097%20Tatu%C3%AD%20SP" target="_blank" rel="noopener noreferrer">Abrir no Google Maps <span class="circle-arrow"><svg aria-hidden="true"><use href="#arrow-up"></use></svg></span></a></div>
+            <span class="map-caption">MAPA ILUSTRATIVO · VEJA A ROTA NO GOOGLE MAPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-main"><a class="brand" href="#inicio" aria-label="M&amp;L — voltar ao início"><img class="brand-emblem" src="https://rafaelbarross.netlify.app/projetos/lm/assets/logo-white.png" width="1536" height="1024" alt="M&amp;L" loading="lazy"></a><address>R. Treze de Fevereiro, 97 — Centro<br>Tatuí, SP · 18270-340</address><a href="https://www.instagram.com/mlconsultorialtda/" target="_blank" rel="noopener noreferrer" class="footer-social">Instagram <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> M&amp;L Consultoria &amp; Estratégia.</span><a href="#inicio">Voltar ao topo <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6"></path></svg></a></div></div></footer>
+  <a class="mobile-contact contact-link" href="#contato">Falar com um consultor <svg aria-hidden="true"><use href="#arrow-up"></use></svg></a>
+  <aside class="portfolio-back"><a href="/#projetos"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"></path></svg> Voltar ao portfólio de Rafael Barros</a></aside>
+
+
+  <!-- config + script original + animações (um único script, ver nota sobre CSP) -->
+  <script>
+    // Número oficial em formato internacional, somente dígitos (55 + DDD + número).
+    window.LM_CONFIG = {
+      whatsapp: '5511968337874',
+      message: 'Olá! Gostaria de conversar sobre a consultoria da M&L.'
+    };
+  
+
+  /* ---------- script.js original ---------- */
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const setMenu = (open) => {
+      menuButton.setAttribute('aria-expanded', String(open));
+      navigation.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.querySelector('.menu-label').textContent = open ? 'Fechar' : 'Menu';
+    };
+    menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+    document.querySelector('.site-header').addEventListener('click', (event) => { if (event.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') { setMenu(false); menuButton.focus(); }
+      if (event.key === 'Tab' && menuButton.getAttribute('aria-expanded') === 'true') {
+        const links = [...document.querySelectorAll('.site-header a, .menu-toggle')];
+        const first = links[0], last = links.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
+    document.addEventListener('click', (event) => { if (!event.target.closest('.site-header')) setMenu(false); });
+    matchMedia('(min-width: 761px)').addEventListener('change', (event) => { if (event.matches) setMenu(false); });
+
+    const config = window.LM_CONFIG || {};
+    const phone = String(config.whatsapp || '').replace(/\D/g, '');
+    const hasWhatsApp = /^55\d{10,11}$/.test(phone);
+    const makeLink = (message) => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    if (hasWhatsApp) {
+      const direct = document.querySelector('#primary-contact');
+      direct.href = makeLink(config.message || 'Olá! Gostaria de falar com a M&L.');
+      document.querySelector('#contact-label').textContent = 'Prefiro ir direto ao WhatsApp';
+      document.querySelector('.lead-form button[type="submit"]').firstChild.textContent = 'Enviar mensagem no WhatsApp ';
+    }
+
+    const leadForm = document.querySelector('#lead-form');
+    const leadService = document.querySelector('#lead-service');
+    const leadChallenge = document.querySelector('#lead-challenge');
+    const leadStatus = document.querySelector('#lead-status');
+    const leadFallback = document.querySelector('#lead-fallback');
+    const resetLeadStatus = () => { leadStatus.textContent = ''; leadFallback.hidden = true; leadFallback.removeAttribute('href'); };
+    document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {
+      leadService.value = link.dataset.service;
+      resetLeadStatus();
+    }));
+    leadForm.addEventListener('input', () => { leadChallenge.setCustomValidity(''); resetLeadStatus(); });
+    leadForm.addEventListener('change', resetLeadStatus);
+    leadForm.addEventListener('submit', event => {
+      event.preventDefault();
+      leadChallenge.setCustomValidity(leadChallenge.value.trim() ? '' : 'Conte um pouco do que você precisa melhorar.');
+      if (!leadForm.reportValidity()) return;
+      if (!hasWhatsApp) { leadStatus.textContent = 'Para conversar agora, use o contato direto da M&L.'; return; }
+      const data = new FormData(leadForm);
+      const name = String(data.get('name') || '').trim();
+      const company = String(data.get('company') || '').trim();
+      const message = ['Olá! Vim pelo site da M&L e gostaria de conversar.'];
+      if (name) message.push(`Meu nome é ${name}.`);
+      if (company) message.push(`Empresa ou organização: ${company}.`);
+      message.push('', `Área de interesse: ${data.get('service')}.`, '', 'Meu desafio:', leadChallenge.value.trim());
+      const url = makeLink(message.join('\n'));
+      leadFallback.href = url;
+      leadFallback.hidden = false;
+      leadStatus.textContent = 'Mensagem preparada. Revise e envie no WhatsApp para iniciar a conversa.';
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+
+    const stickyContact = document.querySelector('.mobile-contact');
+    let heroVisible = true, contactVisible = false, footerVisible = false;
+    const updateSticky = () => stickyContact.classList.toggle('is-visible', !heroVisible && !contactVisible && !footerVisible);
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target.matches('.hero')) heroVisible = entry.isIntersecting;
+          if (entry.target.matches('.contact')) contactVisible = entry.isIntersecting;
+          if (entry.target.matches('.site-footer')) footerVisible = entry.isIntersecting;
+        });
+        updateSticky();
+      });
+      ['.hero', '.contact', '.site-footer'].forEach((selector) => observer.observe(document.querySelector(selector)));
+    }
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  
+
+  /* ---------- Animações: hover no CSS, scroll trigger aqui (sem bibliotecas) ---------- */
+  (() => {
+    const root = document.documentElement;
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    root.classList.add('motion');
+
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+    const clamp = (v, min = 0, max = 1) => Math.min(max, Math.max(min, v));
+
+    /* Revelar ao entrar na tela */
+    const finishReveal = (el) => {
+      el.removeAttribute('data-reveal');
+      el.classList.remove('is-in');
+      ['--d', '--y', '--rease'].forEach((p) => el.style.removeProperty(p));
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Revela ao entrar na tela — ou se já ficou para trás (pulo por âncora, scroll muito rápido).
+        if (!entry.isIntersecting && entry.boundingClientRect.top > 0) return;
+        const el = entry.target;
+        io.unobserve(el);
+        el.classList.add('is-in');
+        if (el.hasAttribute('data-reveal')) {
+          // Depois de aparecer, devolve o elemento ao estado normal (hover volta a funcionar 100%).
+          const onEnd = (e) => { if (e.target === el && e.propertyName === 'translate') { el.removeEventListener('transitionend', onEnd); finishReveal(el); } };
+          el.addEventListener('transitionend', onEnd);
+        }
+        if (el.hasAttribute('data-clip')) {
+          const onClip = (e) => { if (e.target === el && e.propertyName === 'clip-path') { el.removeEventListener('transitionend', onClip); el.classList.add('is-done'); } };
+          el.addEventListener('transitionend', onClip);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+
+    const stage = (els, { stagger = 0.08, base = 0, y, ease } = {}) => {
+      [...els].forEach((el, i) => {
+        if (!el) return;
+        el.setAttribute('data-reveal', '');
+        el.style.setProperty('--d', `${(base + i * stagger).toFixed(2)}s`);
+        if (y) el.style.setProperty('--y', y);
+        if (ease) el.style.setProperty('--rease', ease);
+        io.observe(el);
+      });
+    };
+
+    const lines = (heading, base = 0) => {
+      if (!heading) return;
+      heading.innerHTML = heading.innerHTML
+        .split(/<br\s*\/?>/i)
+        .map((part) => `<span class="line"><span class="line-inner">${part.trim()}</span></span>`)
+        .join(' ');
+      $$('.line-inner', heading).forEach((inner, i) => inner.style.setProperty('--d', `${(base + i * 0.1).toFixed(2)}s`));
+      heading.setAttribute('data-lines', '');
+      io.observe(heading);
+    };
+
+    const clip = (el, dir = '') => { if (!el) return; el.setAttribute('data-clip', dir); io.observe(el); };
+    const inview = (el) => { if (!el) return; el.setAttribute('data-inview', ''); io.observe(el); };
+
+    /* Títulos de seção */
+    $$('main section:not(.hero) h2').forEach((h) => lines(h));
+    $$('.section-top').forEach((top) => stage(top.children, { y: '18px' }));
+
+    /* Soluções */
+    clip($('.service-index'));
+    stage($$('.service-index a'), { stagger: 0.12, base: 0.35, y: '16px' });
+    $$('.service-feature').forEach((feature) => {
+      clip($('.service-photo', feature), feature.classList.contains('service-feature-reverse') ? 'right' : '');
+      lines($('.service-copy h3', feature), 0.3);
+      stage($$('.service-copy .eyebrow, .service-copy > p, .service-deliverables li, .service-cta', feature), { stagger: 0.07, base: 0.4, y: '26px' });
+    });
+
+    /* Método */
+    stage($$('.method-heading > p'));
+    const steps = $$('.method-steps li');
+    const stepLines = steps.map((li) => {
+      const line = document.createElement('span');
+      line.className = 'step-line';
+      line.setAttribute('aria-hidden', 'true');
+      li.prepend(line);
+      return line;
+    });
+    stage(steps, { stagger: 0.12, y: '44px' });
+
+    /* Sobre */
+    clip($('.brand-panel'), 'up');
+    stage($$('.about-copy > :not(h2)'));
+
+    /* Contato */
+    stage($$('.contact-intro > :not(h2):not(.contact-route)'));
+    inview($('.contact-route'));
+    stage([$('.lead-form')], { y: '70px' });
+    stage($$('.lead-form > :is(.form-heading, .form-row, label, input, textarea, button, .form-note)'), { stagger: 0.05, base: 0.25, y: '18px' });
+
+    /* Localização */
+    stage([$('.location-card')], { y: '70px' });
+    stage($$('.location-copy > :not(h2)'), { base: 0.2 });
+    stage([$('.map-pin')], { base: 0.3, y: '-60px', ease: 'cubic-bezier(.34, 1.8, .64, 1)' });
+    stage($$('.map-brand, .map-center .button, .map-caption'), { stagger: 0.1, base: 0.6, y: '16px' });
+
+    /* Rodapé */
+    stage($$('.footer-main > *'), { stagger: 0.1, y: '24px' });
+    stage($$('.footer-bottom > *'), { base: 0.25, y: '10px' });
+
+    /* ---------- Efeitos ligados ao scroll (scrub) ---------- */
+    const progressBar = $('.scroll-progress');
+    const hero = $('.hero');
+    const heroImg = $('.hero-image img');
+    const heroContent = $('.hero-content');
+    const stepsList = $('.method-steps');
+    const map = $('.location-map');
+    const mapStreets = $('.map-streets');
+    const parallax = [
+      ...$$('.service-photo img').map((el) => ({ el, box: el.parentElement, range: 6 })),
+      { el: $('.brand-panel-grid'), box: $('.brand-panel'), range: 7 }
+    ].filter((p) => p.el && p.box);
+
+    // 0 quando o elemento encosta embaixo da tela, 1 quando sai por cima.
+    const throughView = (rect, vh) => clamp((vh - rect.top) / (vh + rect.height));
+
+    let stepCurrent = 0, stepTarget = 0, frame = 0;
+
+    const update = () => {
+      const y = window.scrollY;
+      const vh = window.innerHeight;
+      const max = root.scrollHeight - vh;
+      progressBar.style.transform = `scaleX(${max > 0 ? clamp(y / max) : 0})`;
+
+      const heroH = hero.offsetHeight;
+      if (y <= heroH) {
+        const p = clamp(y / heroH);
+        const fade = clamp(y / (heroH * 0.8));
+        heroImg.style.translate = `0 ${(p * 14).toFixed(2)}%`;
+        heroContent.style.translate = `0 ${(-90 * fade).toFixed(1)}px`;
+        heroContent.style.opacity = (1 - 0.9 * fade).toFixed(3);
+      }
+
+      parallax.forEach(({ el, box, range }) => {
+        const r = box.getBoundingClientRect();
+        if (r.bottom < -50 || r.top > vh + 50) return;
+        el.style.translate = `0 ${(-range + 2 * range * throughView(r, vh)).toFixed(2)}%`;
+      });
+
+      if (map && mapStreets) {
+        const r = map.getBoundingClientRect();
+        if (r.bottom > -50 && r.top < vh + 50) mapStreets.style.scale = (1.2 - 0.2 * throughView(r, vh)).toFixed(4);
+      }
+
+      if (stepsList) {
+        const r = stepsList.getBoundingClientRect();
+        stepTarget = clamp((vh * 0.78 - r.top) / (vh * 0.28 + r.height));
+      }
+    };
+
+    const tick = () => {
+      frame = 0;
+      update();
+      stepCurrent += (stepTarget - stepCurrent) * 0.14;
+      if (Math.abs(stepTarget - stepCurrent) < 0.001) stepCurrent = stepTarget;
+      else frame = requestAnimationFrame(tick);
+      stepLines.forEach((line, i) => { line.style.transform = `scaleX(${clamp(stepCurrent * stepLines.length - i).toFixed(4)})`; });
+    };
+    const requestTick = () => { if (!frame) frame = requestAnimationFrame(tick); };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick);
+    window.addEventListener('load', requestTick);
+    requestTick();
+  })();
+  </script>
+</body>
+</html>
